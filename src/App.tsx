@@ -1,18 +1,23 @@
 import { useState } from "react";
 
 function App() {
-  const [drink, setDrink] = useState({
-    title: "Americano",
-    price: 5,
-  });
+  const [tags, setTags] = useState(["happy", "cheerful"]);
 
   const handleClick = () => {
-    setDrink({ ...drink, price: 6 });
+    // Add
+    setTags([...tags, "exciting"]);
+
+    // Remove
+    setTags(tags.filter((tag) => tag !== "happy"));
+
+    // update
+    setTags(tags.map((tag) => (tag === "happy" ? "happiness" : tag)));
   };
+
+  console.log(tags);
 
   return (
     <div>
-      {drink.price}
       <button onClick={handleClick}>Click Me</button>
     </div>
   );
