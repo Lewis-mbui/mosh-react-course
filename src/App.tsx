@@ -1,16 +1,21 @@
 import { useState } from "react";
 
 function App() {
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
-
-  const [person, setPerson] = useState({
-    firstName: "",
-    lastName: "",
+  const [drink, setDrink] = useState({
+    title: "Americano",
+    price: 5,
   });
-  const [isLoading, setLoading] = useState(false);
 
-  return <div></div>;
+  const handleClick = () => {
+    setDrink({ ...drink, price: 6 });
+  };
+
+  return (
+    <div>
+      {drink.price}
+      <button onClick={handleClick}>Click Me</button>
+    </div>
+  );
 }
 
 export default App;
