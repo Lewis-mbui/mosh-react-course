@@ -1,9 +1,9 @@
-import Button from "./exercises/03-Button";
+import Like from "./exercises/04-Like";
 
 function App() {
   return (
     <div>
-      <Button onClick={() => {}}>My button</Button>
+      <Like onClick={() => console.log("clicked")} />
     </div>
   );
 }
