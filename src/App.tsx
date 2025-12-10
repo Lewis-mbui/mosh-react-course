@@ -1,11 +1,16 @@
-import Like from "./exercises/04-Like";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div>
-      <Like onClick={() => console.log("clicked")} />
-    </div>
-  );
+  // const [firstName, setFirstName] = useState('');
+  // const [lastName, setLastName] = useState('');
+
+  const [person, setPerson] = useState({
+    firstName: "",
+    lastName: "",
+  });
+  const [isLoading, setLoading] = useState(false);
+
+  return <div></div>;
 }
 
 export default App;
