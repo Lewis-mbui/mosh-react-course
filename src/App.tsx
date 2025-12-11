@@ -1,10 +1,9 @@
-// import { useState } from "react";
-import ExpandableText from "./exercises/05-ExpandableText";
+import Form from "./components/Form";
 
 function App() {
   return (
     <div>
-      <ExpandableText>Hello world</ExpandableText>
+      <Form></Form>
     </div>
   );
 }
